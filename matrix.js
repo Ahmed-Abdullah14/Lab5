@@ -80,6 +80,9 @@ const showResult2D = (title, containerId, dataArray) => {
 function performOperation(operation) {
     let matrix1 = getMatrixData2D('matrix1');
     let matrix2 = getMatrixData2D('matrix2');
+    console.log("1st Matrix",matrix1);
+    console.log("2nd Matrix", matrix2);
+    console.log("Operation", operation);
 
     let result;
     try {
