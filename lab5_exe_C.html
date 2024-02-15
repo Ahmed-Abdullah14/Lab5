@@ -230,6 +230,12 @@ Description : DOM Elements.
 				section.appendChild(newParagraph);
 
 				// Task 5: Add placeholders to input elements based on their corresponding label IDs
+				var namePh = document.getElementById("name");
+				namePh.placeholder = namePh.textContent = 'Name'
+				var emailPh = document.getElementById("email");
+				emailPh.placeholder = emailPh.textContent = 'Email'
+				var msgPh = document.getElementById("message");
+				msgPh.placeholder = msgPh.textContent = 'Message'
 				
 
 				// Task 6: Set the src attribute of the image
@@ -246,13 +252,18 @@ Description : DOM Elements.
     			navMenu.appendChild(newNavItem);
 
 				// Task 8: Change the submit button text upon clicking and make it disabled
+				var submitButton = document.querySelector('input[type="button"]');
 				
+				submitButton.onclick = function() {
+        			submitButton.value = "Submitted";
+        			submitButton.disabled = true;
+    			}
 
 				// Task 9: Change the text color of each item in the 'Related Links' to green
-				var changeColor = document. querySelectorAll('');
+				var changeColor = document. querySelectorAll('aside ul li a');
 				for (var i = 0; i < changeColor.length; i++) {
 					changeColor[i].style.color = 'green';
-
+				}
 
 				// Task 10: Add a red solid border to the footer
 				var updateFooter = document.querySelector('footer');
